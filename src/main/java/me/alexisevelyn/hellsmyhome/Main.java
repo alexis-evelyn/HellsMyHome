@@ -40,12 +40,12 @@ public class Main extends JavaPlugin implements Listener {
 		this.getCommand("reload").setExecutor(new Commands());
 
 		// Announce Successful Start
-		getLogger().info("Hell is My Home has successfully started!!!");
+		getLogger().info("Hell's My Home has successfully started!!!");
 	}
 
 	@Override
     public void onDisable() {
-		getLogger().info("Thank you for using Hell is My Home!!!");
+		getLogger().info("Thank you for using Hell's My Home!!!");
 	}
 
 	@EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = false)

@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"me.alexisevelyn.paperwild","l":"Commands"},{"p":"me.alexisevelyn.paperwild","l":"Main"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"me.alexisevelyn.hellsmyhome","l":"Commands"},{"p":"me.alexisevelyn.hellsmyhome","l":"Main"},{"p":"me.alexisevelyn.hellsmyhome","l":"Settings"}]
