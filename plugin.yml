@@ -1,0 +1,19 @@
+main: me.alexisevelyn.hellsmyhome.Main
+name: HellsMyHome
+version: 1.0
+api-version: 1.15
+author: Alexis Evelyn
+description: Use Beds In Interesting Ways
+
+depend: [42]
+softdepend: []
+
+dummy: https://www.spigotmc.org/wiki/plugin-yml/
+
+commands:
+    reload:
+      description: Reload Config
+      usage: /reload
+      permission: hellsmyhome.admin.command.reload
+      default: false
+      permission-message: You don't have the hellsmyhome.admin.command.reload permission.
