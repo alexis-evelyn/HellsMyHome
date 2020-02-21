@@ -13,11 +13,19 @@ import org.bukkit.event.Event.Result;
 // Utility Libraries
 import me.alexisevelyn.fourtytwo.debug.*;
 
+/** Main Class
+ * @author Alexis Evelyn
+ * @author alexisevelyn.me
+ * @version 0.0.1-Snapshot
+ * @since 0.0.1-Snapshot
+*/
 public class Main extends JavaPlugin implements Listener {
+	/** Instance of 42 Library's Debug Class - Used For Verbosity Based Logging */
 	Debug debug = new Debug();
 	
 	// Event Listeners
 
+	/** Called When Enabling Plugin */
 	@Override
     public void onEnable() {
 		// TODO: Hook Into GriefPrevention and Worldguard
@@ -43,11 +51,16 @@ public class Main extends JavaPlugin implements Listener {
 		getLogger().info("Hell's My Home has successfully started!!!");
 	}
 
+	/** Called When Disabling Plugin */
 	@Override
     public void onDisable() {
 		getLogger().info("Thank you for using Hell's My Home!!!");
 	}
 
+	/** Detect When Player Uses Bed and Respond Accordingly
+	 * 
+	 * @param event PlayerBedEnterEvent
+	 */
 	@EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = false)
 	public void onPlayerBed(PlayerBedEnterEvent event) {
 		if(debug.isVerboseEnough(Verbosity.superverbose)) {
