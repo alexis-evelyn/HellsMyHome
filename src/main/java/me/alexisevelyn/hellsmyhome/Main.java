@@ -7,6 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerBedEnterEvent;
+import org.bukkit.event.player.PlayerBedEnterEvent.BedEnterResult;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.event.Event.Result;
 
@@ -68,6 +69,17 @@ public class Main extends JavaPlugin implements Listener {
 			getLogger().info(ChatColor.BLUE + "<PlayerBedEnterEvent> Player Bed Result: " + event.getBedEnterResult().toString());
 		}
 		
-		event.setUseBed(Result.ALLOW);
+		String world = event.getBed().getWorld().getName();
+		
+		// If World Not Listed In Config, Return To Resume Vanilla (Or Other Plugin) Behavior
+		if(Settings.getConfig().get("worlds." + world) == null) {
+			return;
+		}
+		
+		boolean enabled = Settings.getConfig().getBoolean("worlds." + world);
+		
+		if((event.getBedEnterResult() == BedEnterResult.NOT_POSSIBLE_HERE) && enabled) {
+			event.setUseBed(Result.ALLOW);
+		}
 	}
 }
