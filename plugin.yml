@@ -11,9 +11,9 @@ softdepend: []
 dummy: https://www.spigotmc.org/wiki/plugin-yml/
 
 commands:
-    reload:
+    reloadhell:
       description: Reload Config
-      usage: /reload
+      usage: /reloadhell
       permission: hellsmyhome.admin.command.reload
       default: false
       permission-message: You don't have the hellsmyhome.admin.command.reload permission.
