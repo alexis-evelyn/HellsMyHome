@@ -49,16 +49,16 @@ public class Main extends JavaPlugin implements Listener {
 		// Register Commands
 		this.getCommand("reloadhell").setExecutor(new Commands());
 
-//		// TODO: -----------------------------------------------------------------------------
-//		// bStats Enabling Code
-//		int pluginId = 6698;
-//		Metrics metrics = new Metrics(this, pluginId);
-//
-//		// Optional: Add custom charts
-//		// metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));
-//
-//		getLogger().info(ChatColor.GOLD  + "bStats Enabled: " + metrics.isEnabled());
-//		// TODO: -----------------------------------------------------------------------------
+		// TODO: -----------------------------------------------------------------------------
+		// bStats Enabling Code
+		int pluginId = 6698;
+		Metrics metrics = new Metrics(this, pluginId);
+
+		// Optional: Add custom charts
+		// metrics.addCustomChart(new Metrics.SimplePie("chart_id", () -> "My value"));
+
+		getLogger().info(ChatColor.GOLD  + "bStats Enabled: " + metrics.isEnabled());
+		// TODO: -----------------------------------------------------------------------------
 
 		// Announce Successful Start
 		getLogger().info("Hell's My Home has successfully started!!!");
